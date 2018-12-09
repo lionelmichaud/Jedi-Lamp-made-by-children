@@ -1,11 +1,11 @@
 /*
-Holocron Particle Firmware V1.0
-Dave Clarke
-18/02/16
+  Holocron Particle Firmware V1.0
+  Dave Clarke
+  18/02/16
 
-IR Proximty circuit modified from instructables
-http://www.instructables.com/id/Simple-IR-proximity-sensor-with-Arduino
-All other rights reserved.
+  IR Proximty circuit modified from instructables
+  http://www.instructables.com/id/Simple-IR-proximity-sensor-with-Arduino
+  All other rights reserved.
 */
 
 int readIR();           // prototype
@@ -56,15 +56,15 @@ void loop()
   distance = readIR(10);                                      // Read value from IR sensor and store in distance Variable
   if ((distance > 15 || TheForce == true) && toggle == false) // open up lamp and turn on the lights
   {
-    for(pos = closed; pos <= open; pos++)                     // goes from 5 degrees to 115 degrees
-    {                                                         // in steps of 1 degree
+    for (pos = closed; pos <= open; pos++)                    // goes from 5 degrees to 115 degrees
+    { // in steps of 1 degree
       ServoControl(pos);                                      // Set Servo Position and Control LED Brightness
     }
-      ServoControlReset();                                      // When finished, reset variables etc.
+    ServoControlReset();                                      // When finished, reset variables etc.
   }
   if ((distance > 15 || TheForce == true) && toggle == true)  // turn off lamp and close
   {
-    for(pos = open; pos > closed; pos--)                     // goes from 115 degrees to 5 degrees
+    for (pos = open; pos > closed; pos--)                    // goes from 115 degrees to 5 degrees
     {
       ServoControl(pos);                                      // Set Servo Position and Control LED Brightness
     }
@@ -75,19 +75,19 @@ void loop()
 // Function to read IR Proximity sensor
 int readIR(int times)
 {
-  for(int x = 0; x < times; x++)
+  for (int x = 0; x < times; x++)
   {
-    digitalWrite(IRemitter,LOW);    // turning the IR LEDs off to read the IR coming from the ambient
+    digitalWrite(IRemitter, LOW);   // turning the IR LEDs off to read the IR coming from the ambient
     delay(1);                       // minimum delay necessary to read values
     ambientIR = analogRead(IRpin);  // storing IR coming from the ambient
-    digitalWrite(IRemitter,HIGH);   // turning the IR LEDs on to read the IR coming from the obstacle
+    digitalWrite(IRemitter, HIGH);  // turning the IR LEDs on to read the IR coming from the obstacle
     delay(1);                       // minimum delay necessary to read values
     obstacleIR = analogRead(IRpin); // storing IR coming from the obstacle
-    value[x] = ambientIR-obstacleIR; // calculating changes in IR values and storing it for future average
+    value[x] = ambientIR - obstacleIR; // calculating changes in IR values and storing it for future average
   }
-  for(int y = 0; y < times; y++)
+  for (int y = 0; y < times; y++)
   {
-    distance+=value[y];              // calculating the average based on the "accuracy"
+    distance += value[y];            // calculating the average based on the "accuracy"
   }
   if (powerON == true)
   {
@@ -98,7 +98,7 @@ int readIR(int times)
   {
     //no start up delay
   }
-  return(distance/times);            // return the final value
+  return (distance / times);         // return the final value
 }
 
 // Function for Cloud Variable Remote Switch
@@ -128,11 +128,11 @@ void ServoControlReset(void)
   distance = 0;                               // reest distance to stop accidental operation
   if (toggle == false)                        // Make sure LED is High for open and low for closed
   {
-      digitalWrite(mainLED, LOW);
+    digitalWrite(mainLED, LOW);
   }
   else
   {
-     digitalWrite(mainLED, HIGH);
+    digitalWrite(mainLED, HIGH);
   }
   delay(1000);                                // prevent operation too quickly
 }
