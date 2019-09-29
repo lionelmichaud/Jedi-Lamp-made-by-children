@@ -1,0 +1,39 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=Circuit Lampe Jedi
+*Date=02:20:05
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;;57.4183;-3.1044;0;Bottom;Hole2
+2;0.47mF;200 mil [THT, electrolytic];24.3983;-13.2644;-90;Bottom;C2
+3;0.47mF;200 mil [THT, electrolytic];26.9383;-46.2844;-90;Bottom;C1
+4;;;53.0164;-56.8387;0;Bottom;TXT1
+5;;THT;45.9883;-10.7244;-90;Bottom;J2
+6;10k;THT;44.7183;-43.7444;180;Bottom;R1
+7;;;36.4633;-38.6644;0;Bottom;Jumper1
+8;;;21.8498;-28.5044;90;Bottom;Nano
+9;;;45.9474;-7.5974;0;Bottom;TXT1
+10;;TO92 [THT];37.2888;-10.8133;180;Bottom;Q2
+11;;;8.40149;-4.10204;0;Bottom;TXT1
+12;;;9.15833;-48.8244;0;Bottom;JACK2
+13;;THT;12.9683;-15.8044;90;Bottom;J3
+14;;TO92 [THT];39.8288;-48.7355;0;Bottom;Q1
+15;;THT;53.6083;-53.9044;90;Bottom;J1
+16;;;2.80833;-57.7144;0;Bottom;Hole4
+17;10k;THT;42.1783;-15.8044;-180;Bottom;R2
+18;;THT;14.2383;-4.3744;90;Bottom;J4
+19;;;9.15137;-56.3458;0;Bottom;TXT1
+20;100k;THT;11.6983;-9.4544;0;Bottom;R4
+21;;;57.4183;-57.7144;0;Bottom;Hole5
+22;330;THT;49.7983;-48.8244;0;Bottom;R3
+23;;;2.80833;-3.1044;0;Bottom;Hole1
+24;;;7.3172;-15.7337;0;Bottom;TXT1
